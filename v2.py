@@ -22,8 +22,7 @@ def button2():
 def button3():
     print('installing...')
     abutton.configure(state='disabled',text="Installing...")
-    os.chdir('JaxCore')
-    msg = subprocess.run(['JaxCoreSetup.bat'])
+    msg = subprocess.run(['winget', 'install', 'BeWidgets'])
     print(f'{msg}')
     time.sleep(1)
     abutton.configure(text="Installed")
@@ -47,8 +46,8 @@ button1 = customtkinter.CTkButton(master=instance, text='install',command=button
 button1.place(relx=0.88, rely=0.228, anchor='center')
 
 
-JaxCore = customtkinter.CTkLabel(master=instance,text="JaxCore (Latest version(Disable AV))",font=('Montserrat Ultra-Bold',18))
-JaxCore.place(relx=0.22,rely=0.328, anchor=customtkinter.CENTER)
+BeWidgets = customtkinter.CTkLabel(master=instance,text="BeWidgets (Latest version)",font=('Montserrat Ultra-Bold',18))
+BeWidgets.place(relx=0.17,rely=0.328, anchor=customtkinter.CENTER)
 abutton = customtkinter.CTkButton(master=instance, text='install',command=button3)
 abutton.place(relx=0.88, rely=0.328, anchor='center')
 instance.resizable(False,False)
