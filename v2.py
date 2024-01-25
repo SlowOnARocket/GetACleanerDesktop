@@ -32,7 +32,7 @@ customtkinter.set_appearance_mode('dark')
 instance = customtkinter.CTk()
 instance.geometry("700x305")
 instance.title("GACD V2.0 (Stable)")
-instance.iconbitmap("assets/gacd.ico")
+
 
 translucentTB = customtkinter.CTkLabel(master=instance,text="TranslucentTB (Latest version)",font=('Montserrat Ultra-Bold',18))
 translucentTB.place(relx=0.2,rely=0.128, anchor=customtkinter.CENTER)
